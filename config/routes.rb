@@ -1,3 +1,12 @@
 Rails.application.routes.draw do
-  # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
+  # root route
+  root 'site#index'
+
+  # posts routes
+  get 'api/posts', to: 'posts#index'
+  get 'api/posts/:id', to: 'posts#show'
+  post 'api/posts', to: 'posts#create'
+  delete 'api/posts/:id', to: 'posts#delete'
+  put 'api/posts/:id', to: 'posts#update'
+
 end
