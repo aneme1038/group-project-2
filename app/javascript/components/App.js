@@ -3,10 +3,13 @@
 // =============================
 // packages
 import React from 'react'
+
 //components
 import Header from './Header.js'
 import Aside from './Aside.js'
 import Main from './Main.js'
+import { userInfo } from 'os'
+
 // =============================
 // COMPONENT CLASS
 // =============================
@@ -48,7 +51,7 @@ class App extends React.Component {
                 break
             case 'editPost':
                 pageTitle = 'Review again? Cool.'
-                formInputs = {
+                userInputs = {
                     username: postData.name,
                     avatar: postData.image,
                     body: postData.body,
@@ -74,16 +77,22 @@ class App extends React.Component {
     render() {
         return (
             <React.Fragment>
-                
+
                 {/* HEADER: INCLUDES LOGO */}
                 <Header />
-            
+
                 {/* COMBO ASIDE AND MAIN DIVS */}
                 <div className="main-aside">
                     {/* ASIDE INCLUDES NAVIGATION */}
-                    <Aside />
+                    <Aside
+                        handleView={this.handleView}
+                    />
                     {/* MAIN INCLUDES REVIEW POSTS */}
-                    <Main />
+                    <Main
+                        view={this.state.view}
+                        handleView={this.handleView}
+                        formInputs={this.state.formInputs}
+                    />
                 </div>
 
             </React.Fragment>
