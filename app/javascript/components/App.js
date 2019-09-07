@@ -9,7 +9,10 @@ import Header from './Header.js'
 import Aside from './Aside.js'
 import Main from './Main.js'
 import { userInfo } from 'os'
+require('dotenv').config()
 
+//dotenv
+APIKEY = process.env.APIKEY
 // =============================
 // COMPONENT CLASS
 // =============================
