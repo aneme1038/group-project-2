@@ -16,7 +16,7 @@ class App extends React.Component {
         this.state = {
             view: {
                 page: 'home',
-                pageTitle: 'Gamespayce'
+                pageTitle: 'Gameplayce'
             },
             userInputs: {
                 username: null,
@@ -38,10 +38,26 @@ class App extends React.Component {
             body: '',
             id: null
         }
-        //decide pageTitle based on view
-        /////
-        //SWITCH STATEMENT HERE
-        //////
+        // decide the pageTitle based on the view
+        switch (view) {
+            case 'home':
+                pageTitle = 'Game Reviews'
+                break
+            case 'addPost':
+                pageTitle = 'Add Review'
+                break
+            case 'editPost':
+                pageTitle = 'Review again? Cool.'
+                formInputs = {
+                    username: postData.name,
+                    avatar: postData.image,
+                    body: postData.body,
+                    id: postData.id
+                }
+                break
+            default:
+                break
+        }
 
         //UPDATE STATE
         this.setState({
@@ -58,12 +74,18 @@ class App extends React.Component {
     render() {
         return (
             <React.Fragment>
+                
+                {/* HEADER: INCLUDES LOGO */}
                 <Header />
-
+            
+                {/* COMBO ASIDE AND MAIN DIVS */}
                 <div className="main-aside">
+                    {/* ASIDE INCLUDES NAVIGATION */}
                     <Aside />
+                    {/* MAIN INCLUDES REVIEW POSTS */}
                     <Main />
                 </div>
+
             </React.Fragment>
         )
     }
