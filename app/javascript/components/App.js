@@ -12,7 +12,7 @@ import { userInfo } from 'os'
 require('dotenv').config()
 
 //dotenv
-APIKEY = process.env.APIKEY
+const APIKEY = process.env.APIKEY
 // =============================
 // COMPONENT CLASS
 // =============================
