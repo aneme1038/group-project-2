@@ -113,11 +113,13 @@ class App extends React.Component {
                 formInputs={this.state.formInputs}
             />
         </div>
+        {/* SEARCH FOR GAMES */}
         <div className="searchBar">
           <form onSubmit={this.handleSearch}>
             <label htmlFor='gameTitle'>Search Games</label>
             <input type='text' onChange={this.handleChange}
             value={this.state.games.gameTitle} id="userSearch"/>
+            <input type='submit' value='Search'/>
           </form>
         </div>
       </React.Fragment>
