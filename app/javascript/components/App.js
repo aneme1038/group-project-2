@@ -57,9 +57,9 @@ class App extends React.Component {
   // ==============
   render() {
       return (
-          <React.Fragment> // or <div className>
+          <React.Fragment>
           <Header />
-          </React.Fragment> //or </div>
+          </React.Fragment>
       )
   }
 }

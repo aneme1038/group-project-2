@@ -3,7 +3,7 @@
 // =============================
 // packages
 import React from 'react'
-
+import Aside from './Aside.js'
 // =============================
 // COMPONENT CLASS
 // =============================
@@ -13,7 +13,9 @@ class Header extends React.Component {
   // ==============
   render () {
     return (
-
+      <div>
+        <Aside />
+      </div>
     )
   }
 }
