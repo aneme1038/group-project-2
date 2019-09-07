@@ -46,7 +46,7 @@ class Form extends React.Component {
     componentDidMount() {
       console.log(this.props.userInputs.username);
         this.setState({
-            username: this.props.userInputsgi.username,
+            username: this.props.userInputs.username,
             avatar: this.props.userInputs.avatar,
             body: this.props.userInputs.body,
             id: this.props.userInputs.id
@@ -58,8 +58,20 @@ class Form extends React.Component {
     render() {
         return (
             <form onSubmit={this.handleSubmit}>
-                <input type="submit" value="Post Review" />
-            </form>
+        <label>
+          Username
+          <input type="text" placeholder="your username" id="username" value={this.state.username} onChange={this.handleChange}/>
+        </label>
+        <label>
+          Avatar URL
+          <input type="text" placeholder="your avatar" id="avatar" value={this.state.avatar} onChange={this.handleChange}/>
+        </label>
+        <label id="post-form">
+          Review
+          <textarea placeholder="review game" id="body" value={this.state.body} onChange={this.handleChange}></textarea>
+        </label>
+        <input type="submit" value="Add Review"/>
+      </form>
         )
     }
 }
