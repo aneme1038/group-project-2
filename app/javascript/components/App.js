@@ -77,16 +77,22 @@ class App extends React.Component {
     render() {
         return (
             <React.Fragment>
-                
+
                 {/* HEADER: INCLUDES LOGO */}
                 <Header />
-            
+
                 {/* COMBO ASIDE AND MAIN DIVS */}
                 <div className="main-aside">
                     {/* ASIDE INCLUDES NAVIGATION */}
-                    <Aside />
+                    <Aside
+                        handleView={this.handleView}
+                    />
                     {/* MAIN INCLUDES REVIEW POSTS */}
-                    <Main />
+                    <Main
+                        view={this.state.view}
+                        handleView={this.handleView}
+                        formInputs={this.state.formInputs}
+                    />
                 </div>
 
             </React.Fragment>
