@@ -19,7 +19,7 @@ class App extends React.Component {
         this.state = {
             view: {
                 page: 'home',
-                pageTitle: 'Gameplayce'
+                pageTitle: 'Game Reviews'
             },
             userInputs: {
                 username: null,
@@ -52,8 +52,8 @@ class App extends React.Component {
             case 'editPost':
                 pageTitle = 'Review again? Cool.'
                 userInputs = {
-                    username: postData.name,
-                    avatar: postData.image,
+                    username: postData.username,
+                    avatar: postData.avatar,
                     body: postData.body,
                     id: postData.id
                 }

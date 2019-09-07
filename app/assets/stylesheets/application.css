@@ -2,6 +2,7 @@
 /* NORMALIZE INPUT */
 /* ======================= */
 @import url("normalize.css");
+@import url('https://fonts.googleapis.com/css?family=Orbitron:400,500,700,900&display=swap');
 
 /* ======================= */
 /* BORDER EVERYTHING */
@@ -35,10 +36,13 @@ header {
 }
 
 aside {
-    width: 20%;
+    width: 25%;
     height: 80vh;
     padding: 0 1%;
     background-color: #82d865;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
 }
 
 main {
@@ -46,4 +50,55 @@ main {
     height: 80vh;
     padding: 0 1%;
     background-color: #57abe2;
+}
+
+/* ======================= */
+/* HEADERS */
+/* ======================= */
+
+h1 {
+    font-family: 'Orbitron', sans-serif;
+    font-weight: 700;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+/* ======================= */
+/* BUTTONS */
+/* ======================= */
+
+.button-green {
+    margin: 10px 0;
+    padding: 15px;
+    font-family: 'Orbitron', sans-serif;
+    font-weight: 400;
+    font-size: 1.25rem;
+    letter-spacing: 2px;
+    text-align: center;
+    background-color: #6ab153;
+    border-radius: 10px;
+    border-bottom: 4px solid #569143;
+    color: #3f6931;
+    cursor: url('https://i.imgur.com/yeKqltZ.png'),pointer;
+}
+
+.button-green:hover{
+    background-color: #484848;
+    border-radius: 10px;
+    border-bottom: 4px solid #000000;
+    color: #eeeeee;
+}
+
+/* ======================= */
+/* POST */
+/* ======================= */
+
+article {
+    background-color: salmon;
+    height: 400px;
+    width: 40%;
+}
+
+img {
+    border-radius: 50%;
 }
