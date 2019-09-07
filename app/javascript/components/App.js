@@ -39,7 +39,7 @@ class App extends React.Component {
           }
       }
       this.handleSearch = this.handleSearch.bind(this)
-      this.handlechange = this.handleChange.bind(this)
+      this.handleChange = this.handleChange.bind(this)
   }
   // ==============
   // HANDLERS
@@ -113,7 +113,7 @@ class App extends React.Component {
             <Main
                 view={this.state.view}
                 handleView={this.handleView}
-                formInputs={this.state.formInputs}
+                userInputs={this.state.userInputs}
             />
         </div>
         {/* SEARCH FOR GAMES */}

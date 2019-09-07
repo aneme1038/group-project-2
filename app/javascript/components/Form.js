@@ -44,8 +44,9 @@ class Form extends React.Component {
     //  LIFECYCLES
     // ===============
     componentDidMount() {
+      console.log(this.props.userInputs.username);
         this.setState({
-            username: this.props.userInputs.username,
+            username: this.props.userInputsgi.username,
             avatar: this.props.userInputs.avatar,
             body: this.props.userInputs.body,
             id: this.props.userInputs.id
