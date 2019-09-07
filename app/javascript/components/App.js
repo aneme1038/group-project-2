@@ -16,7 +16,7 @@ class App extends React.Component {
     this.state = {
       view: {
         page: 'home',
-        pageTitle: ''
+        pageTitle: 'Gamespayce'
       },
       userInputs: {
         username: null,

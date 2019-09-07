@@ -6,7 +6,7 @@ class Post
   attr_reader :id
 
   # connect to postgres
-  DB = PG.connect({:host => "localhost", :port => 5432, :dbname => 'grapevine_development'})
+  DB = PG.connect({:host => "localhost", :port => 5432, :dbname => 'group_project_2_development'})
 
   # ===============================
   # PREPARED STATEMENTS
@@ -14,9 +14,9 @@ class Post
   # create post
   DB.prepare("create_post",
     <<-SQL
-      INSERT INTO posts (name, image, body)
+      INSERT INTO posts (username, avatar, body)
       VALUES ($1, $2, $3)
-      RETURNING id, name, image, body;
+      RETURNING id, username, avatar, body;
     SQL
   )
 
@@ -24,9 +24,9 @@ class Post
   DB.prepare("update_post",
     <<-SQL
       UPDATE posts
-      SET name = $2, image = $3, body = $4
+      SET username = $2, avatar = $3, body = $4
       WHERE id = $1
-      RETURNING id, name, image, body;
+      RETURNING id, username, avatar, body;
     SQL
   )
 
@@ -39,8 +39,8 @@ class Post
     return results.map do |result|
       {
           "id" => result["id"].to_i,
-          "name" => result["name"],
-          "image" => result["image"],
+          "username" => result["username"],
+          "avatar" => result["avatar"],
           "body" => result["body"],
       }
     end
@@ -54,8 +54,8 @@ class Post
     if !results.num_tuples.zero?
       return {
         "id" => results.first["id"].to_i,
-        "name" => results.first["name"],
-        "image" => results.first["image"],
+        "username" => results.first["username"],
+        "avatar" => results.first["avatar"],
         "body" => results.first["body"]
       }
     # if there are no results, return an error
@@ -68,11 +68,11 @@ class Post
 
   # create
   def self.create(opts)
-    results = DB.exec_prepared("create_post", [opts["name"], opts["image"], opts["body"]])
+    results = DB.exec_prepared("create_post", [opts["username"], opts["avatar"], opts["body"]])
     return {
       "id" => results.first["id"].to_i,
-      "name" => results.first["name"],
-      "image" => results.first["image"],
+      "username" => results.first["username"],
+      "avatar" => results.first["avatar"],
       "body" => results.first["body"],
     }
   end
@@ -85,12 +85,12 @@ class Post
 
   # update
   def self.update(id, opts)
-    results = DB.exec_prepared("update_post", [id, opts["name"], opts["image"], opts["body"]])
+    results = DB.exec_prepared("update_post", [id, opts["username"], opts["avatar"], opts["body"]])
     return {
       "id" => results.first["id"].to_i,
       "body" => results.first["body"],
-      "name" => results.first["name"],
-      "image" => results.first["image"]
+      "username" => results.first["username"],
+      "avatar" => results.first["avatar"]
     }
   end
 
