@@ -37,6 +37,7 @@ class App extends React.Component {
             summary: null,
             coverImage: null
           }
+
       }
       this.handleSearch = this.handleSearch.bind(this)
       this.handleChange = this.handleChange.bind(this)
