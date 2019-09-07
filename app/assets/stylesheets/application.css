@@ -148,7 +148,7 @@ main a {
     border-radius: 10px;
     border-bottom: 4px solid #b35848;
     color: #ffffff;
-    cursor: url('https://i.imgur.com/yeKqltZ.png'),progress;
+    cursor: url('https://i.imgur.com/yeKqltZ.png'),auto;
 }
 
 .button-red:hover{
