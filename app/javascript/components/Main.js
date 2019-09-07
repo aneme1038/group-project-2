@@ -26,14 +26,15 @@ class Main extends React.Component {
   // HANDLERS
   // ==============
   fetchPosts = () => {
-    fetch('/replace')
+    fetch('/api/posts')
       .then(data => data.json())
       .then(jData => {
         this.setState({ posts: jData})
       })
   }
+
   handleCreate = (createData) => {
-    fetch('/replace', {
+    fetch('/api/posts', {
       body: JSON.stringify(createData),
       method: 'Post',
       headers: {
@@ -55,7 +56,7 @@ class Main extends React.Component {
       .catch(error => console.log(error))
   }
   handleUpdate = (updateData) => {
-    fetch(`/replace/${updateData.id}`, {
+    fetch(`/api/posts/${updateData.id}`, {
       body: JSON.stringify(updateData),
       method: 'PUT',
       headers: {
@@ -70,7 +71,7 @@ class Main extends React.Component {
     .catch(error => console.log(error))
   }
   handleDelete = (id) => {
-    fetch(`/replace/${id}`, {
+    fetch(`/api/posts/${id}`, {
       method: 'DELETE',
       headers: {
         'Accept': 'application/json, text/plain, */*',
