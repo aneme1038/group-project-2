@@ -3,19 +3,20 @@
 // =============================
 // packages
 import React from 'react'
-import Aside from './Aside.js'
+
 // =============================
 // COMPONENT CLASS
 // =============================
 class Header extends React.Component {
-  // ==============
-  // RENDER
-  // ==============
+
+// ==============
+// RENDER
+// ==============
   render () {
     return (
-      <div>
-        <Aside />
-      </div>
+        <header>
+            <img src="https://i.imgur.com/ne4Inag.png" />
+        </header>
     )
   }
 }
