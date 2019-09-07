@@ -3,10 +3,13 @@
 // =============================
 // packages
 import React from 'react'
+
 //components
 import Header from './Header.js'
 import Aside from './Aside.js'
 import Main from './Main.js'
+import { userInfo } from 'os'
+
 // =============================
 // COMPONENT CLASS
 // =============================
@@ -48,7 +51,7 @@ class App extends React.Component {
                 break
             case 'editPost':
                 pageTitle = 'Review again? Cool.'
-                formInputs = {
+                userInputs = {
                     username: postData.name,
                     avatar: postData.image,
                     body: postData.body,
