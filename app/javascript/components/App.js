@@ -31,11 +31,11 @@ class App extends React.Component {
               id: null
           },
           games: {
-            gameTitle: '',
-            category: '',
-            rating: '',
-            summary: '',
-            coverImage: ''
+            gameTitle: null,
+            category: null,
+            rating: null,
+            summary: null,
+            coverImage: null
           }
       }
       this.handleSearch = this.handleSearch.bind(this)
