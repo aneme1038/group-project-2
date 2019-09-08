@@ -16,6 +16,7 @@ class Form extends React.Component {
             username: '',
             avatar: '',
             body: '',
+            game: '',
             id: null
         }
     }
@@ -49,6 +50,7 @@ class Form extends React.Component {
             username: this.props.userInputs.username,
             avatar: this.props.userInputs.avatar,
             body: this.props.userInputs.body,
+            game: this.props.userInputs.game,
             id: this.props.userInputs.id
         })
     }
@@ -65,6 +67,10 @@ class Form extends React.Component {
         <label>
           Avatar URL
           <input type="text" placeholder="your avatar" id="avatar" value={this.state.avatar} onChange={this.handleChange}/>
+        </label>
+        <label>
+          Game Title
+          <input type="text" placeholder="Game Title" id="game" onChange={this.handleChange} value={this.state.game}/>
         </label>
         <label id="post-form">
           Review
