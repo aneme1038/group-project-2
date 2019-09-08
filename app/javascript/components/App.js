@@ -109,12 +109,17 @@ class App extends React.Component {
             <React.Fragment >
 
                 {/* HEADER: INCLUDES LOGO */}
-                < Header />
+                < Header
+                  handleSearch={this.handleSearch}
+                  handleChange={this.handleChange}
+                  gameTitle={this.state.gameTitle}
+                />
                 {/* COMBO ASIDE AND MAIN DIVS */}
                 < div className="main-aside" >
                     {/* ASIDE INCLUDES NAVIGATION */}
                     < Aside
                         handleView={this.handleView}
+                        game={this.state.game}
                     />
                     {/* MAIN INCLUDES REVIEW POSTS */}
                     < Main
@@ -123,20 +128,7 @@ class App extends React.Component {
                         userInputs={this.state.userInputs}
                     />
                 </div>
-                {/* SEARCH FOR GAMES */}
-                < div className="searchBar" >
-                    <form onSubmit={this.handleSearch}>
-                        <label htmlFor='gameTitle'>Search Games</label>
-                        <input type='text' onChange={this.handleChange}
-                            value={this.state.gameTitle} id="gameTitle" />
-                        <input type='submit' value='Search' />
-                    </form>
-                </div >
 
-                {(this.state.game)
-                    ? <GameInfo game={this.state.game} />
-                    : null
-                }
             </React.Fragment >
         )
     }
