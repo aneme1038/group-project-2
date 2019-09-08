@@ -29,7 +29,7 @@ class Main extends React.Component {
     fetch('/api/posts')
       .then(data => data.json())
       .then(jData => {
-        this.setState({ posts: jData})
+        this.setState({ posts: jData })
       })
   }
 

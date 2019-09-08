@@ -5,7 +5,7 @@
 import React from 'react'
 
 // =============================
-// COMPONENT CLASS
+// COMPONENT CLASSrif
 // =============================
 class Post extends React.Component {
     // ==============
@@ -17,7 +17,7 @@ class Post extends React.Component {
                 <div className="post-header">
                     <h2>Review by <span className="username">{this.props.postData.username}</span></h2>
                     <img src={this.props.postData.avatar} alt="" />
-                    <h2 className="gameName">{this.props.postData.game}</h2>
+                    {/* <h2 className="gameName">{this.props.postData.game}</h2> */}
                 </div>
 
                 <p>{this.props.postData.body}</p>
