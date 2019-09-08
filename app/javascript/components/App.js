@@ -29,6 +29,7 @@ class App extends React.Component {
                 username: null,
                 avatar: null,
                 body: null,
+                game: null,
                 id: null
             },
             baseURL: 'https://cors-anywhere.herokuapp.com/giantbomb.com/api/search/?',
@@ -52,6 +53,7 @@ class App extends React.Component {
             username: '',
             avatar: '',
             body: '',
+            game: '',
             id: null
         }
         // decide the pageTitle based on the view
@@ -68,6 +70,7 @@ class App extends React.Component {
                     username: postData.username,
                     avatar: postData.avatar,
                     body: postData.body,
+                    game: postData.game,
                     id: postData.id
                 }
                 break
