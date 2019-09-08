@@ -3,7 +3,7 @@
 // =============================
 // packages
 import React from 'react'
-
+import GameInfo from './GameInfo.js'
 // =============================
 // COMPONENT CLASS
 // =============================
@@ -24,10 +24,10 @@ class Aside extends React.Component {
                 onClick={() => { {this.props.handleView('addPost')} }}>Add Review</a>
               </div>
               <div className="searchResults">
-              {(this.state.game)
-                  ? <GameInfo game={this.state.game} />
-                  : null
-              }
+                {(this.props.game)
+                    ? <GameInfo game={this.props.game} />
+                    : null
+                }
               </div>
             </aside>
         )
