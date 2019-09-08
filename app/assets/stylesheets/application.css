@@ -1,8 +1,9 @@
 /* ======================= */
-/* NORMALIZE INPUT */
+/* NORMALIZE / GOOGLE FONTS */
 /* ======================= */
 @import url("normalize.css");
 @import url('https://fonts.googleapis.com/css?family=Orbitron:400,500,700,900&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Rajdhani:400,600,700&display=swap');
 
 /* ======================= */
 /* BORDER EVERYTHING */
@@ -15,24 +16,36 @@
 /* BODY PARTS */
 /* ======================= */
 body {
-    background-color: #f5f5f5;
+    background-color: #000000;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
 }
 
 header {
     display: flex;
     flex-direction: row;
-    justify-content: center;
+    justify-content: space-between;
+    align-items: center;
     width: 100%;
-    background-color: #000000;
-    border-bottom: 10px solid #ff6600;
+    height: 60px;
+    padding: 20px 0;
+    background-color: #fefefe;
+    border-bottom: 10px solid #00b66d;
 }
+
+
+
+
+
+
 
 .main-aside {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     align-items: flex-start;
-    margin: 50px 3%;
+    /* margin: 50px 3%; */
 }
 
 aside {
@@ -61,18 +74,19 @@ main {
 /* ======================= */
 
 h1 {
-    font-family: 'Orbitron', sans-serif;
-    font-weight: 700;
-    text-align: center;
+    font-family: 'Rajdhani', sans-serif;
+    font-size: 6rem;
+    letter-spacing: -1px;
     text-transform: uppercase;
+    color: white;
 }
 
 h2 {
-    font-family: 'Orbitron', sans-serif;
-    font-weight: 700;
-    font-size: 1.5rem;
-    text-align: center;
+    font-family: 'Rajdhani', sans-serif;
+    font-size: 3rem;
+    letter-spacing: -1px;
     text-transform: uppercase;
+    color: black;
 }
 
 p {
