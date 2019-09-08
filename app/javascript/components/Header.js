@@ -15,9 +15,14 @@ class Header extends React.Component {
   render () {
     return (
         <header>
-            <h2>Gameplayce</h2>
-            {/* SEARCH FOR GAMES */}
-            < div className="searchBar" >
+            {/* ======================== APP TITLE ======================== */}
+            <h2 onClick={() => { {this.props.handleView('home')} }}>Gameplayce</h2>
+
+            {/* ======================== ADD REVIEW ======================== */}
+            <h5 onClick={() => { {this.props.handleView('addPost')} }}>Add Review</h5>
+
+            {/* ======================== SEARCH FOR GAMES ======================== */}
+            <div className="searchBar">
                 <form onSubmit={this.props.handleSearch}>
                     <label htmlFor='gameTitle'>Search Games</label>
                     <input type='text' onChange={this.props.handleChange}
