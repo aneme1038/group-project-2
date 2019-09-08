@@ -10,10 +10,10 @@ import Aside from './Aside.js'
 import Main from './Main.js'
 import GameInfo from './GameInfo.js'
 import { userInfo } from 'os'
-require('dotenv').config()
-
-//dotenv
-const APIKEY = process.env.APIKEY
+// require('dotenv').config()
+//
+// //dotenv
+// const APIKEY = process.env.APIKEY
 // =============================
 // COMPONENT CLASS
 // =============================
