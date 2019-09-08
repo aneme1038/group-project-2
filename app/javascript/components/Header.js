@@ -16,6 +16,15 @@ class Header extends React.Component {
     return (
         <header>
             <img src="https://i.imgur.com/ne4Inag.png" />
+            {/* SEARCH FOR GAMES */}
+            < div className="searchBar" >
+                <form onSubmit={this.props.handleSearch}>
+                    <label htmlFor='gameTitle'>Search Games</label>
+                    <input type='text' onChange={this.props.handleChange}
+                        value={this.props.gameTitle} id="gameTitle" />
+                    <input type='submit' value='Search' />
+                </form>
+            </div >
         </header>
     )
   }
