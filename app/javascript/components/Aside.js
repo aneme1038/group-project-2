@@ -15,7 +15,7 @@ class Aside extends React.Component {
         return (
             <aside>
               <div className="navigation">
-                <h1>Start Menu</h1>
+                <h3>Start Menu</h3>
 
                 <a className="button-green"
                 onClick={() => { {this.props.handleView('home')} }}>Home</a>
