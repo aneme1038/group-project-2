@@ -99,6 +99,7 @@ class App extends React.Component {
                         game: json,
                         gameTitle: ''
                     }), error => console.error(error))
+            //make a fetch request to the server for any reviews that match the game name/title
         })
     }
     handleChange(event) {
