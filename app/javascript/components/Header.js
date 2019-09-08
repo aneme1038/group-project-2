@@ -22,7 +22,7 @@ class Header extends React.Component {
                     <label htmlFor='gameTitle'>Search Games</label>
                     <input type='text' onChange={this.props.handleChange}
                         value={this.props.gameTitle} id="gameTitle" />
-                    <input type='submit' value='Search' />
+                    <input type='submit' value="LET'S GO" />
                 </form>
             </div >
         </header>
