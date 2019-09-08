@@ -15,7 +15,7 @@ class Header extends React.Component {
   render () {
     return (
         <header>
-            <img src="https://i.imgur.com/ne4Inag.png" />
+            <h2>Gameplayce</h2>
             {/* SEARCH FOR GAMES */}
             < div className="searchBar" >
                 <form onSubmit={this.props.handleSearch}>
