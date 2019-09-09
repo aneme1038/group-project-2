@@ -17,9 +17,9 @@ class Post
   # create post
   DB.prepare("create_post",
     <<-SQL
-      INSERT INTO posts (username, avatar, body)
-      VALUES ($1, $2, $3)
-      RETURNING id, username, avatar, body;
+      INSERT INTO posts (username, avatar, body, game)
+      VALUES ($1, $2, $3, $4)
+      RETURNING id, username, avatar, body, game;
     SQL
   )
 
@@ -27,9 +27,9 @@ class Post
   DB.prepare("update_post",
     <<-SQL
       UPDATE posts
-      SET username = $2, avatar = $3, body = $4
+      SET username = $2, avatar = $3, body = $4, game = $5
       WHERE id = $1
-      RETURNING id, username, avatar, body;
+      RETURNING id, username, avatar, body, game;
     SQL
   )
 
@@ -45,6 +45,7 @@ class Post
           "username" => result["username"],
           "avatar" => result["avatar"],
           "body" => result["body"],
+          "game" => result["game"]
       }
     end
   end
@@ -59,7 +60,8 @@ class Post
         "id" => results.first["id"].to_i,
         "username" => results.first["username"],
         "avatar" => results.first["avatar"],
-        "body" => results.first["body"]
+        "body" => results.first["body"],
+        "game" => results.first["game"]
       }
     # if there are no results, return an error
     else
@@ -68,15 +70,19 @@ class Post
       }, status: 400
     end
   end
-
+  # find game by gamename
+  def self.find(game)
+    results = DB.exec("SELECT * FROM posts WHERE game=#{game}")
+  end
   # create
   def self.create(opts)
-    results = DB.exec_prepared("create_post", [opts["username"], opts["avatar"], opts["body"]])
+    results = DB.exec_prepared("create_post", [opts["username"], opts["avatar"], opts["body"], opts["game"]])
     return {
       "id" => results.first["id"].to_i,
       "username" => results.first["username"],
       "avatar" => results.first["avatar"],
       "body" => results.first["body"],
+      "game" => results.first["game"]
     }
   end
 
@@ -88,12 +94,13 @@ class Post
 
   # update
   def self.update(id, opts)
-    results = DB.exec_prepared("update_post", [id, opts["username"], opts["avatar"], opts["body"]])
+    results = DB.exec_prepared("update_post", [id, opts["username"], opts["avatar"], opts["body"], opts["game"]])
     return {
       "id" => results.first["id"].to_i,
       "body" => results.first["body"],
       "username" => results.first["username"],
-      "avatar" => results.first["avatar"]
+      "avatar" => results.first["avatar"],
+      "game" => results.first["game"]
     }
   end
 

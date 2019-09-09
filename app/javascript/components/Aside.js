@@ -4,6 +4,7 @@
 // packages
 import React from 'react'
 import GameInfo from './GameInfo.js'
+
 // =============================
 // COMPONENT CLASS
 // =============================
@@ -14,21 +15,10 @@ class Aside extends React.Component {
     render() {
         return (
             <aside>
-              <div className="navigation">
-                <h1>Start Menu</h1>
-
-                <a className="button-green"
-                onClick={() => { {this.props.handleView('home')} }}>Home</a>
-
-                <a className="button-green"
-                onClick={() => { {this.props.handleView('addPost')} }}>Add Review</a>
-              </div>
-              <div className="searchResults">
                 {(this.props.game)
-                    ? <GameInfo game={this.props.game} />
-                    : null
-                }
-              </div>
+                        ? <GameInfo game={this.props.game} />
+                        : null
+                    }
             </aside>
         )
     }

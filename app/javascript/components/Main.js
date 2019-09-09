@@ -29,7 +29,7 @@ class Main extends React.Component {
     fetch('/api/posts')
       .then(data => data.json())
       .then(jData => {
-        this.setState({ posts: jData})
+        this.setState({ posts: jData })
       })
   }
 
@@ -98,7 +98,7 @@ class Main extends React.Component {
   render () {
     return (
       <main>
-        <h1>{this.props.view.pageTitle}</h1>
+        <h3>{this.props.view.pageTitle}</h3>
         { this.props.view.page === 'home'
           ? this.state.posts.map((postData) => (
         <Post

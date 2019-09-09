@@ -23,12 +23,13 @@ class App extends React.Component {
         this.state = {
             view: {
                 page: 'home',
-                pageTitle: 'Game Reviews'
+                pageTitle: 'Find a game. Write a review.'
             },
             userInputs: {
                 username: null,
                 avatar: null,
                 body: null,
+                game: null,
                 id: null
             },
             baseURL: 'https://cors-anywhere.herokuapp.com/giantbomb.com/api/search/?',
@@ -52,12 +53,13 @@ class App extends React.Component {
             username: '',
             avatar: '',
             body: '',
+            game: '',
             id: null
         }
         // decide the pageTitle based on the view
         switch (view) {
             case 'home':
-                pageTitle = 'Game Reviews'
+                pageTitle = 'Find a game. Write a review.'
                 break
             case 'addPost':
                 pageTitle = 'Add Review'
@@ -68,6 +70,7 @@ class App extends React.Component {
                     username: postData.username,
                     avatar: postData.avatar,
                     body: postData.body,
+                    game: postData.game,
                     id: postData.id
                 }
                 break
@@ -96,6 +99,7 @@ class App extends React.Component {
                         game: json,
                         gameTitle: ''
                     }), error => console.error(error))
+            //make a fetch request to the server for any reviews that match the game name/title
         })
     }
     handleChange(event) {
@@ -112,20 +116,22 @@ class App extends React.Component {
                 < Header
                   handleSearch={this.handleSearch}
                   handleChange={this.handleChange}
+                  handleView={this.handleView}
                   gameTitle={this.state.gameTitle}
                 />
                 {/* COMBO ASIDE AND MAIN DIVS */}
                 < div className="main-aside" >
-                    {/* ASIDE INCLUDES NAVIGATION */}
-                    < Aside
-                        handleView={this.handleView}
-                        game={this.state.game}
-                    />
                     {/* MAIN INCLUDES REVIEW POSTS */}
                     < Main
                         view={this.state.view}
                         handleView={this.handleView}
                         userInputs={this.state.userInputs}
+                    />
+
+                    {/* ASIDE INCLUDES NAVIGATION */}
+                    < Aside
+                        handleView={this.handleView}
+                        game={this.state.game}
                     />
                 </div>
 

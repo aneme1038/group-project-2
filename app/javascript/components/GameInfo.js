@@ -4,14 +4,16 @@ class GameInfo extends React.Component {
   render () {
     console.log(this.props.game.results[0]);
     return (
-      <div>
-        <img src={this.props.game.results[0].image.icon_url}/>
-        <h1>Name: {this.props.game.results[0].name}</h1>
-        Description: {this.props.game.results[0].deck}
+      <div className="results">
+          <h1>{this.props.game.results[0].name}</h1>
+
+          <div className="image-description">
+            <img src={this.props.game.results[0].image.small_url}/>
+            <p>Description: {this.props.game.results[0].deck}</p>
+          </div>        
       </div>
     )
   }
 }
-
 
 export default GameInfo
