@@ -1,3 +1,5 @@
+//this file will support the form for posting reviews and editing reviews. 
+
 // =============================
 // DEPENDENCIES
 // =============================
@@ -94,7 +96,7 @@ class Form extends React.Component {
                     id="body"
                     value={this.state.body}
                     onChange={this.handleChange}></textarea>
-                
+
                 <input type="submit" value="Add Review" className="button" />
             </form>
         )
