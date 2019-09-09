@@ -11,6 +11,7 @@ import Header from './Header.js'
 import Aside from './Aside.js'
 import Main from './Main.js'
 import GameInfo from './GameInfo.js'
+import { userInfo } from 'os'
 // import { userInfo } from 'os'
 require('dotenv').config()
 //
@@ -67,7 +68,7 @@ class App extends React.Component {
                 pageTitle = 'Find a game. Write a review.'
                 break
             case 'addPost':
-                pageTitle = 'Add Review'
+                pageTitle = 'Just copy that game title over here. Why? Because we said so.'
                 break
             case 'editPost':
                 pageTitle = 'Review again? Cool.'
@@ -133,7 +134,7 @@ class App extends React.Component {
                         userInputs={this.state.userInputs}
                     />
 
-                    {/* ASIDE INCLUDES NAVIGATION */}
+                    {/* ASIDE */}
                     < Aside
                         handleView={this.handleView}
                         game={this.state.game}

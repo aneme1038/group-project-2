@@ -18,7 +18,7 @@ class Aside extends React.Component {
                 {(this.props.game)
                         ? <GameInfo
                         game={this.props.game}
-                        handleView={this.handleView} />
+                        handleView={this.props.handleView} />
                         : null
                     }
             </aside>

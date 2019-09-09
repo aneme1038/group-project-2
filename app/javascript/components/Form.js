@@ -5,6 +5,7 @@
 // =============================
 // packages
 import React from 'react'
+
 // =============================
 // COMPONENT CLASS
 // =============================
@@ -84,7 +85,7 @@ class Form extends React.Component {
                     <label>Game Title</label>
                     <input
                         type="text"
-                        placeholder="Game Title"
+                        placeholder="game title"
                         id="game"
                         onChange={this.handleChange}
                         value={this.state.game}/>
