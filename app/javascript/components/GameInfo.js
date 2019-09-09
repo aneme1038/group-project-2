@@ -20,7 +20,7 @@ class GameInfo extends React.Component {
 
                     <div className="image-description">
                         <img src={game.image.small_url} />
-                        <p>Description: {game.deck}</p>
+                        <p>{game.deck}</p>
                     </div>
                 </div>
             )
