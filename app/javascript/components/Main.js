@@ -1,3 +1,5 @@
+// This file handles many of the main handlers and functionality of the application. 
+
 // =============================
 // DEPENDENCIES
 // =============================
