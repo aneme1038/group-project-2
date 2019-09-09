@@ -14,7 +14,7 @@ class GameInfo extends React.Component {
                 <div className="game-results" key={ross}>
                     <h4>{game.name}</h4>
                     <a className="button blue"
-                    onClick={() => { {this.state.handleView('addPost')} }}>
+                    onClick={() => { {this.props.handleView('addPost')} }}>
                         Review This Game
                     </a>
 

@@ -87,7 +87,7 @@ p {
     font-size: 1rem;
     line-height: 2.5rem;
     width: 100%;
-    color: var(--sand-yellow);
+    color: var(--snake-blue);
 }
 
 .username {
@@ -160,36 +160,18 @@ header .searchBar {
     margin-right: 7%;
 }
 
+/* ======================= */
+/* FORMS & INPUTS */
+/* ======================= */
 
-
-
-input[type="text"] {
-    width: 250px;
-    height: 32px;
-    margin-right: 0px;
-    border: 2px solid var(--slime-green);
-    padding: 0 20px;
-    outline: 0;
+/* main form: add/edit review */
+form {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
 }
 
-header input[type="submit"] {
-    height: 36px;
-    background-color: #00b66d;
-    color: #ffffff;
-    margin-left: 0px;
-    border: 2px solid #00b66d;
-    font-family: 'Rajdhani', sans-serif;
-    padding: 0 10px;
-    outline: 0;
-    border-left: none;
-}
-
-header input[type="submit"]:hover {
-    background-color: #00b66d;
-    color: #000000;
-}
-
-
+/* header form: search games */
 header form {
     display: flex;
     flex-direction: row;
@@ -198,35 +180,54 @@ header form {
 }
 
 label {
-    font-family: 'Rajdhani', sans-serif;
-    font-weight: 600;
     margin: 0 20px;
+    font-weight: 600;
     font-size: 1.5rem;
     text-transform: uppercase;
-    color: #d4c697;
+    color: var(--sand-yellow);
 }
 
-form {
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
+input[type="text"] {
+    width: 250px;
+    height: 33px;
+    margin-right: 0px;
+    border: 2px solid var(--slime-green);
+    padding: 0 20px;
+    outline: 0;
 }
 
+/* main: input specific */
 main input {
     margin: 30px 0;
 }
 
+textarea {
+    width: 600px;
+    height: 250px;
+    padding: 15px;
+    resize: none;
+}
+
+/* main: input specific */
 main input[type="submit"] {
     width: 200px;
 }
 
-textarea {
-    width:600px;
-    height: 250px;
-    resize: none;
-    border: 3px solid var(--slime-green);
+header input[type="submit"] {
+    height: 35px;
+    margin-left: 0px;
+    padding: 0 10px;
+    border: 2px solid var(--slime-green);
+    border-left: none;
+    background-color: var(--slime-green);
+    color: #ffffff;
+    outline: 0;
 }
 
+header input[type="submit"]:hover {
+    background-color: var(--sand-yellow);
+    color: #000000;
+}
 
 
 /* ======================= */
@@ -279,8 +280,8 @@ main img {
 
 .results img {
     /* border-radius: 50%; */
-    background-color: #00b66d;
-    border: 7px solid #00b66d;
+    background-color: var(--slime-green);
+    border: 7px solid var(--slime-green);
     width: 250px;
     height: 250px;
     margin-right: 20px;
@@ -326,10 +327,4 @@ main img {
 .red {
     border: 2px solid var(--slime-green);
     background-color: #fffefe;
-}
-
-.green {
-    background-color: #00b66d;
-    border-bottom: 4px solid rgb(69, 116, 54);
-    color: rgb(0, 0, 0);
 }
