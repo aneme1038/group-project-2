@@ -9,11 +9,13 @@ import Header from './Header.js'
 import Aside from './Aside.js'
 import Main from './Main.js'
 import GameInfo from './GameInfo.js'
-import { userInfo } from 'os'
-// require('dotenv').config()
+// import { userInfo } from 'os'
+require('dotenv').config()
 //
-// //dotenv
-// const APIKEY = process.env.APIKEY
+//dotenv
+const APIKEY = process.env.REACT_APP_APIKEY
+// console.log(APIKEY)
+
 // =============================
 // COMPONENT CLASS
 // =============================
@@ -38,6 +40,7 @@ class App extends React.Component {
             query: '&query=%22',
             gameTitle: '',
             endQuery: '%22',
+            resources: '&resources=game',
             searchURL: ''
         }
         this.handleSearch = this.handleSearch.bind(this)
@@ -90,7 +93,7 @@ class App extends React.Component {
         console.log('this route works');
         event.preventDefault()
         this.setState({
-            searchURL: this.state.baseURL + this.state.apikey + this.state.format + this.state.query + this.state.gameTitle + this.state.endQuery
+            searchURL: this.state.baseURL + this.state.apikey + this.state.format + this.state.query + this.state.gameTitle + this.state.endQuery + this.state.resources
         }, () => {
             fetch(this.state.searchURL)
                 .then(response => response.json())
@@ -141,14 +144,3 @@ class App extends React.Component {
 }
 
 export default App
-
-
-
-            // games: {
-            //     gameTitle: null,
-            //     category: null,
-            //     rating: null,
-            //     summary: null,
-            //     coverImage: null
-            // },
-            // https://cors-anywhere.herokuapp.com/
