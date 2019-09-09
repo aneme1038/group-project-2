@@ -5,34 +5,36 @@
 import React from 'react'
 
 // =============================
-// COMPONENT CLASS
+// COMPONENT CLASSrif
 // =============================
 class Post extends React.Component {
-  // ==============
-  // RENDER
-  // ==============
-  render () {
-    return (
-      <article>
-        <div className="post-header">
+    // ==============
+    // RENDER
+    // ==============
+    render() {
+        return (
+            <article>
+                <div className="post-header">
+                    <h4>@{this.props.postData.username} reviewed
+                        <span className="gamename"> {this.props.postData.game}</span></h4>
+                    <img src={this.props.postData.avatar} alt="" />
+                </div>
 
-        </div>
-        <div className="post-body">
-          {this.props.postData.body}
-        </div>
-        <div className="post-options">
-          <ul>
-            <li onClick={() => {
-              this.props.handleView('editPost', this.props.postData)
-            }}>edit post</li>
-            <li onClick={() => {
-              this.props.handleDelete(this.props.postData.id)
-            }}>delete post</li>
-          </ul>
-        </div>
-      </article>
-    )
-  }
+                <p>{this.props.postData.body}</p>
+
+                <div className="post-options">
+                <a className="button blue"
+                    onClick={() => {this.props.handleView('editPost', this.props.postData)}}>
+                        Edit Review
+                    </a>
+                    <a className="button red"
+                    onClick={() => {this.props.handleDelete(this.props.postData.id)}}>
+                        Delete Review
+                    </a>
+                </div>
+            </article>
+        )
+    }
 }
 
 // =============================
