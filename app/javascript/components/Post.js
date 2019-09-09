@@ -1,4 +1,4 @@
-//This file will handle the main posting from the form of the various reviews users make 
+//This file will handle the main posting from the form of the various reviews users make and post it to body.
 
 // =============================
 // DEPENDENCIES
