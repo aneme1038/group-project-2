@@ -37,7 +37,7 @@ class App extends React.Component {
             format: '&format=json',
             query: '&query=%22',
             gameTitle: '',
-            resources: '%22resources=game',
+            endQuery: '%22',
             searchURL: ''
         }
         this.handleSearch = this.handleSearch.bind(this)
@@ -90,7 +90,7 @@ class App extends React.Component {
         console.log('this route works');
         event.preventDefault()
         this.setState({
-            searchURL: this.state.baseURL + this.state.apikey + this.state.format + this.state.query + this.state.gameTitle + this.state.resources
+            searchURL: this.state.baseURL + this.state.apikey + this.state.format + this.state.query + this.state.gameTitle + this.state.endQuery
         }, () => {
             fetch(this.state.searchURL)
                 .then(response => response.json())
