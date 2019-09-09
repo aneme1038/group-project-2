@@ -96,6 +96,11 @@ p {
     color: white;
 }
 
+.username {
+    color: var(--slight-brown);
+
+}
+
 .gamename {
     color: var(--snake-blue);
 }
