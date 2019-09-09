@@ -1,3 +1,5 @@
+//This file is the main rendering file of the application and will likely contain all things pointing to other js files and helping render views.
+
 // =============================
 // DEPENDENCIES
 // =============================

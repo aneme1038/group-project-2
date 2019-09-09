@@ -1,4 +1,8 @@
+//this file will handle the api game info coming in from fetch call.
+
+//Dependancies
 import React from 'react'
+//components
 class GameInfo extends React.Component {
   render () {
     console.log(this.props.game.results);
@@ -20,7 +24,7 @@ class GameInfo extends React.Component {
                     </div>
                 </div>
             )
-         })}    
+         })}
       </div>
     )
   }
