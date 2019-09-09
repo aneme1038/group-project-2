@@ -60,24 +60,43 @@ class Form extends React.Component {
     render() {
         return (
             <form onSubmit={this.handleSubmit}>
-        <label>
-          Username
-          <input type="text" placeholder="your username" id="username" value={this.state.username} onChange={this.handleChange}/>
-        </label>
-        <label>
-          Avatar URL
-          <input type="text" placeholder="your avatar" id="avatar" value={this.state.avatar} onChange={this.handleChange}/>
-        </label>
-        <label>
-          Game Title
-          <input type="text" placeholder="Game Title" id="game" onChange={this.handleChange} value={this.state.game}/>
-        </label>
-        <label id="post-form">
-          Review
-          <textarea placeholder="review game" id="body" value={this.state.body} onChange={this.handleChange}></textarea>
-        </label>
-        <input type="submit" value="Add Review"/>
-      </form>
+                <div className="user-info">
+                    <label>Username</label>
+                    <input
+                        type="text"
+                        placeholder="your username"
+                        id="username"
+                        value={this.state.username}
+                        onChange={this.handleChange} />
+
+                    <label>Avatar</label>
+                    <input
+                        type="text"
+                        placeholder="avatar url"
+                        id="avatar"
+                        value={this.state.avatar}
+                        onChange={this.handleChange} />
+                </div>
+
+                <div className="user-info">
+                    <label>Game Title</label>
+                    <input
+                        type="text"
+                        placeholder="Game Title"
+                        id="game"
+                        onChange={this.handleChange}
+                        value={this.state.game}/>
+                </div>
+
+                <label id="post-form">Review</label>
+                <textarea
+                    placeholder="review game"
+                    id="body"
+                    value={this.state.body}
+                    onChange={this.handleChange}></textarea>
+                
+                <input type="submit" value="Add Review" className="button" />
+            </form>
         )
     }
 }
