@@ -15,19 +15,19 @@ class Post extends React.Component {
         return (
             <article>
                 <div className="post-header">
-                    <h2>Review by <span className="username">{this.props.postData.username}</span></h2>
+                    <h4>@{this.props.postData.username} reviewed
+                        <span className="gamename"> {this.props.postData.game}</span></h4>
                     <img src={this.props.postData.avatar} alt="" />
-                    {/* <h2 className="gameName">{this.props.postData.game}</h2> */}
                 </div>
 
                 <p>{this.props.postData.body}</p>
 
                 <div className="post-options">
-                <a className="button-blue"
+                <a className="button blue"
                     onClick={() => {this.props.handleView('editPost', this.props.postData)}}>
                         Edit Review
                     </a>
-                    <a className="button-red"
+                    <a className="button red"
                     onClick={() => {this.props.handleDelete(this.props.postData.id)}}>
                         Delete Review
                     </a>

@@ -9,6 +9,17 @@
 /* BORDER EVERYTHING */
 /* ======================= */
 
+:root {
+    --sand-yellow: #d4c697;
+    --slight-brown:#79644f;
+    --slime-green: #00b66d;
+    --snake-blue: #007291;
+}
+
+/* ======================= */
+/* BORDER EVERYTHING */
+/* ======================= */
+
 /* * {
     border: 1px solid gold;
 } */
@@ -31,7 +42,7 @@ h2 {
     font-size: 3rem;
     letter-spacing: -1px;
     text-transform: uppercase;
-    color: black;
+    color: var(--sand-yellow);
     text-align: right;
     cursor: url('https://i.imgur.com/yeKqltZ.png'), auto;
 }
@@ -43,17 +54,28 @@ h3 {
     color: #ffffff;
 }
 
+h4 {
+    font-size: 2.5rem;
+    letter-spacing: -1px;
+    text-transform: uppercase;
+    color: #000000;
+}
+
+aside h4 {
+    color: var(--sand-yellow);
+}
+
 h5 {
     font-size: 2rem;
     font-weight: 600;
     letter-spacing: -1px;
     text-transform: uppercase;
-    color: #000000;
+    color: #ffffff;
     line-height: 1rem;
 }
 
 h5:hover {
-    color: #00b66d;
+    color: var(--slime-green);
     line-height: 1rem;
     cursor: url('https://i.imgur.com/yeKqltZ.png'),progress;
 }
@@ -62,20 +84,25 @@ h5:hover {
 p {
     font-family: 'Helvetica Neue', sans-serif;
     font-weight: 400;
-    font-size: 1.5rem;
-    line-height: 3rem;
-    width: 75%;
+    font-size: 1rem;
+    line-height: 2.5rem;
+    width: 100%;
+    color: var(--sand-yellow);
 }
 
 .username {
-    color: #4a90be;
+    color: var(--slight-brown);
+}
+
+.gamename {
+    color: var(--snake-blue);
 }
 
 /* ======================= */
 /* BODY PARTS */
 /* ======================= */
 body {
-    background-color: #000000;
+    background-color: var(--snake-blue);
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
@@ -90,8 +117,8 @@ header {
     width: 100%;
     height: 60px;
     padding: 20px 0;
-    background-color: #fefefe;
-    border-bottom: 10px solid #00b66d;
+    background-color: var(--slight-brown);
+    border-bottom: 10px solid var(--slime-green);
 }
 
 .main-aside {
@@ -104,7 +131,7 @@ main {
     width: 65%;
     height: 95vh;
     height: 100%;
-    margin-left: 6%;
+    margin-left: 5%;
 }
 
 aside {
@@ -115,9 +142,10 @@ aside {
     width: 35%;
     height: 95vh;
     padding: 20px;
-    background-color: #888888;
-    color: white;
+    background-color: var(--sand-yellow);
+    color: var(--slight-brown);
     overflow: scroll;
+    margin: 0 auto;
 }
 
 /* ======================= */
@@ -132,23 +160,28 @@ header .searchBar {
     margin-right: 7%;
 }
 
+
+
+
 input[type="text"] {
-    width: 350px;
+    width: 250px;
     height: 32px;
     margin-right: 0px;
-    border: 2px solid #000000;
+    border: 2px solid var(--slime-green);
     padding: 0 20px;
+    outline: 0;
 }
 
 header input[type="submit"] {
     height: 36px;
-    background-color: #000000;
+    background-color: #00b66d;
     color: #ffffff;
     margin-left: 0px;
-    border: 2px solid #000000;
+    border: 2px solid #00b66d;
     font-family: 'Rajdhani', sans-serif;
     padding: 0 10px;
     outline: 0;
+    border-left: none;
 }
 
 header input[type="submit"]:hover {
@@ -170,118 +203,44 @@ label {
     margin: 0 20px;
     font-size: 1.5rem;
     text-transform: uppercase;
+    color: #d4c697;
 }
+
+form {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+
+main input {
+    margin: 30px 0;
+}
+
+main input[type="submit"] {
+    width: 200px;
+}
+
+textarea {
+    width:600px;
+    height: 250px;
+    resize: none;
+    border: 3px solid var(--slime-green);
+}
+
+
 
 /* ======================= */
-/* BUTTONS */
-/* ======================= */
-
-.button {
-
-
-    margin: 10px 3%;
-    padding: 15px;
-    font-family: 'Orbitron', sans-serif;
-    font-weight: 400;
-    font-size: 1.25rem;
-    letter-spacing: 2px;
-    text-align: center;
-    /* background-color: #6ab153; */
-    border-radius: 10px;
-    
-    color: #3f6931;
-    
-}
-
-.green {
-    background-color: #00b66d;
-    border-bottom: 4px solid rgb(69, 116, 54);
-    color: rgb(0, 0, 0);
-}
-
-
-
-
-
-
-.button-green {
-    margin: 10px 0;
-    padding: 15px;
-    font-family: 'Orbitron', sans-serif;
-    font-weight: 400;
-    font-size: 1.25rem;
-    letter-spacing: 2px;
-    text-align: center;
-    background-color: #6ab153;
-    border-radius: 10px;
-    border-bottom: 4px solid #569143;
-    color: #3f6931;
-    cursor: url('https://i.imgur.com/yeKqltZ.png'),progress;
-}
-
-.button-green:hover{
-    background-color: #484848;
-    border-radius: 10px;
-    border-bottom: 4px solid #000000;
-    color: #eeeeee;
-}
-
-.button-blue {
-    margin: 10px 0;
-    padding: 15px;
-    font-family: 'Orbitron', sans-serif;
-    font-weight: 400;
-    font-size: 1.25rem;
-    letter-spacing: 2px;
-    text-align: center;
-    background-color: #57abe2;
-    border-radius: 10px;
-    border-bottom: 4px solid #4a90be;
-    color: #336586;
-    cursor: url('https://i.imgur.com/yeKqltZ.png'),progress;
-}
-
-.button-blue:hover{
-    background-color: #484848;
-    border-radius: 10px;
-    border-bottom: 4px solid #000000;
-    color: #eeeeee;
-}
-
-.button-red {
-    margin: 10px 0;
-    padding: 15px;
-    font-family: 'Orbitron', sans-serif;
-    font-weight: 400;
-    font-size: 1.25rem;
-    letter-spacing: 2px;
-    text-align: center;
-    background-color: #d8705e;
-    border-radius: 10px;
-    border-bottom: 4px solid #b35848;
-    color: #ffffff;
-    cursor: url('https://i.imgur.com/yeKqltZ.png'),auto;
-}
-
-.button-red:hover{
-    background-color: #484848;
-    border-radius: 10px;
-    border-bottom: 4px solid #000000;
-    color: #ff0000;
-}
-
-/* ======================= */
-/* POST */
+/* POSTS */
 /* ======================= */
 
 article {
-    background-color: #f3f3f3;
+    background-color: var(--sand-yellow);
     height: auto;
     width: 90%;
-    margin: 50px auto;
+    margin: 50px 0;
     padding: 20px;
     border-radius: 10px;
-    border: 5px solid #4a90be;
+    border: 5px solid var(--slight-brown);
 }
 
 .post-header {
@@ -324,16 +283,53 @@ main img {
     border: 7px solid #00b66d;
     width: 250px;
     height: 250px;
+    margin-right: 20px;
 }
 
 .image-description {
     display: flex;
-    flex-direction: row-reverse;
+    flex-direction: row;
     justify-content: space-between;
 }
 
 .game-results {
-    width: 80%;
-    border-radius: 10px;
-    background-color: rgb(35, 35, 119);
+    width: 90%;
+    border-radius: 5px;
+    background-color: var(--slight-brown);
+    padding: 20px;
+    margin: 30px 0;
+}
+
+
+
+/* ======================= */
+/* BUTTONS */
+/* ======================= */
+
+.button {
+    font-size: 1.25rem;
+    border-radius: 3px;
+    padding: 10px 20px;
+    text-transform: uppercase;
+}
+
+.button:hover {
+    background-color: #000000;
+    color: #ffffff;
+}
+
+.blue {
+    border: 2px solid var(--snake-blue);
+    background-color: #fcfcfc;
+}
+
+.red {
+    border: 2px solid var(--slime-green);
+    background-color: #fffefe;
+}
+
+.green {
+    background-color: #00b66d;
+    border-bottom: 4px solid rgb(69, 116, 54);
+    color: rgb(0, 0, 0);
 }
