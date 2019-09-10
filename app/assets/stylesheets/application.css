@@ -355,12 +355,26 @@ main img {
         margin-left: 1%;
         margin-bottom: -40px;
     }
-    
+
     header .searchBar {
         margin-right: 1%;
     }
 
     label {
         margin: 0 5px;
+    }
+    /*==============
+    Aside
+    *============*/
+    .game-results {
+      font-size: 0.5em;
+      padding: 50px;
+    }
+    /* I am noticing most of what I am trying to do with game results is having no effect on the css ....I could not figure out why this was? I tried game results and the deck. I think the image comes in from the api as a set width and height so I don't know if that is adjustable somehow? I tried it below to no effect
+    */
+    .game-results > img {
+      width: 50px;
+      height: 50px;
+      font-size: 0.5em;
     }
 }
