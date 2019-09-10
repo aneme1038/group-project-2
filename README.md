@@ -1,6 +1,6 @@
 # README
 
-GamePlayce, a full CRUD application implementing Ruby, Rails, and React.JS alongside Postgresql. The application is a simple take on posting reviews for games that you can search via an API provided by GiantBomb. For more information on the API, visit https://www.giantbomb.com/
+GamePlayce, a full CRUD application implementing Ruby, Rails, and React.JS alongside Postgresql. The application is a simple take on posting reviews for games that you can search via an API provided by GiantBomb. For more information on the API, visit https://www.giantbomb.com/api
 
 This application was built as part of a group project to fulfill General Assembly's project group requirements. 
 
