@@ -1,12 +1,14 @@
 /* ======================= */
-/* NORMALIZE / GOOGLE FONTS */
+/* IMPORTS */
 /* ======================= */
+
 @import url("normalize.css");
 @import url('https://fonts.googleapis.com/css?family=Orbitron:400,500,700,900&display=swap');
 @import url('https://fonts.googleapis.com/css?family=Rajdhani:400,600,700&display=swap');
 
+
 /* ======================= */
-/* BORDER EVERYTHING */
+/* COLOR VARIABLES */
 /* ======================= */
 
 :root {
@@ -16,98 +18,80 @@
     --snake-blue: #007291;
 }
 
-/* ======================= */
-/* BORDER EVERYTHING */
-/* ======================= */
-
-/* * {
-    border: 1px solid gold;
-} */
 
 /* ======================= */
-/* HEADERS & GENERAL TEXT */
+/* GENERAL TEXT */
 /* ======================= */
 
-/* GAME RESULTS TITLE */
+/* APP TITLE */
 h1 {
-    font-size: 5.75rem;
-    letter-spacing: -1px;
-    text-transform: uppercase;
-    color: #ffffff;
-    text-align: right;
+    margin-left: 7%;
     padding: 10px;
-}
-
-h2 {
-    font-size: 3rem;
-    letter-spacing: -1px;
-    text-transform: uppercase;
-    color: var(--sand-yellow);
-    text-align: right;
-    cursor: url('https://i.imgur.com/yeKqltZ.png'), auto;
-}
-
-h2:hover {
-    color: white;
-}
-
-h3 {
     font-size: 3.5rem;
     letter-spacing: -1px;
     text-transform: uppercase;
+    color: var(--sand-yellow);
+    cursor: url('https://i.imgur.com/yeKqltZ.png'), auto;
+}
+
+h1:hover {
+    color: var(--slime-green);
+}
+
+/* MAIN SECTION DESCRIPTION */
+h2 {
+    font-size: 3.25rem;
+    letter-spacing: -1px;
+    text-transform: uppercase;
     color: #ffffff;
 }
 
-h4 {
-    font-size: 2.5rem;
+/* POST & GAME TITLE */
+h3 {
+    font-size: 2.75rem;
     letter-spacing: -1px;
     text-transform: uppercase;
     color: #000000;
-    line-height: 3rem;
 }
 
-aside h4 {
-    color: var(--sand-yellow);
-    line-height: 3rem;
-}
-
-h5 {
+/* HEADER ADD REVIEW BUTTON, UNIVERSAL COMMENT-OUT */
+/* h4 {
     font-size: 2rem;
     font-weight: 600;
+    line-height: 1rem;
     letter-spacing: -1px;
     text-transform: uppercase;
     color: #ffffff;
-    line-height: 1rem;
-}
-
-h5:hover {
-    color: var(--slime-green);
-    line-height: 1rem;
     cursor: url('https://i.imgur.com/yeKqltZ.png'),progress;
 }
 
+h4:hover {
+    color: var(--slime-green);   
+} */
 
+/* REVIEW MAIN TEXT & GAME DESCRIPTION */
 p {
+    width: 90%;
     font-family: 'Helvetica Neue', sans-serif;
     font-weight: 400;
     font-size: 1.5rem;
     line-height: 2.5rem;
-    width: 100%;
-    color: white;
 }
 
-.username {
-    color: var(--slight-brown);
-
-}
-
-.gamename {
+/* COLOR TEXT */
+.blue-text {
     color: var(--snake-blue);
 }
+
+.sand-text {
+    color: var(--sand-yellow);
+}
+
 
 /* ======================= */
 /* BODY PARTS */
 /* ======================= */
+
 body {
     background-color: var(--snake-blue);
     display: flex;
@@ -116,75 +100,57 @@ body {
     font-family: 'Rajdhani', sans-serif;
 }
 
+/* CONTAINS APP TITLE, ADD REVIEW BUTTON, SEARCH GAME FUNCTION */
 header {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
+    padding: 20px 0;
     width: 100%;
     height: 60px;
-    padding: 20px 0;
     background-color: var(--slight-brown);
     border-bottom: 10px solid var(--slime-green);
 }
 
+/* CONTAINS MAIN, ASIDE */
 .main-aside {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
 }
 
+/* CONTAINS MAIN DESCRIPTION, POSTS */
 main {
-    width: 65%;
-    height: 95vh;
-    height: 100%;
-    margin-left: 5%;
+    width: 60%;
+    margin-left: 2%;
     overflow: scroll;
 }
 
+/* CONTAINS GAME SEARCH RESULTS */
 aside {
     display: flex;
     flex-direction: column;
-    justify-content: flex-end;
-    align-items: flex-end;
-    width: 35%;
-    height: 95vh;
-    padding: 20px;
-    background-color: var(--sand-yellow);
+    justify-content: flex-start;
+    align-items: flex-start;
+    padding: 10px;
+    width: 40%;
+    height: 90vh;
     color: var(--slight-brown);
-    overflow: scroll;
+    background-color: var(--sand-yellow);
+    border-left: 5px solid var(--slime-green);
     margin: 0 auto;
-}
-
-/* ======================= */
-/* HEADER-SPECIFICS */
-/* ======================= */
-
-header h2 {
-    margin-left: 7%;
-}
-
-header .searchBar {
-    margin-right: 7%;
 }
 
 /* ======================= */
 /* FORMS & INPUTS */
 /* ======================= */
 
-/* main form: add/edit review */
+/* MAIN FORM: ADD/EDIT */
 form {
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
-}
-
-/* header form: search games */
-header form {
-    display: flex;
-    flex-direction: row;
-    justify-content: flex-end;
-    align-items: center;
 }
 
 label {
@@ -195,18 +161,13 @@ label {
     color: var(--sand-yellow);
 }
 
-input[type="text"] {
+input {
     width: 250px;
     height: 33px;
-    margin-right: 0px;
-    border: 2px solid var(--slime-green);
-    padding: 0 20px;
-    outline: 0;
-}
-
-/* main: input specific */
-main input {
     margin: 30px 0;
+    padding: 0 20px;
+    border: 2px solid var(--slime-green);
+    outline: 0;
 }
 
 textarea {
@@ -217,42 +178,56 @@ textarea {
     resize: none;
 }
 
-/* main: input specific */
-main input[type="submit"] {
-    width: 200px;
+/* ======================= */
+/* UNIQUE TO HEADER */
+/* ======================= */
+
+/* GAME SEARCH BAR */
+.searchBar {
+    margin-right: 7%;
 }
 
+header label {
+    display: inline;
+}
+
+/* HEADER FORM: ADD/EDIT */
+header form {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+/* HEADER SUBMIT BUTTON */
 header input[type="submit"] {
-    height: 35px;
-    margin-left: 0px;
-    padding: 0 10px;
-    border: 2px solid var(--slime-green);
-    border-left: none;
+    font-weight: 600;
+    width: 100px;
+    height: 37px;
+    text-align: center;
     background-color: var(--slime-green);
-    color: #ffffff;
-    outline: 0;
 }
 
 header input[type="submit"]:hover {
     background-color: var(--sand-yellow);
-    color: #000000;
 }
 
-
 /* ======================= */
-/* POSTS */
+/* UNIQUE TO MAIN */
 /* ======================= */
 
+/* LOCATED ON MAIN */
 article {
-    background-color: var(--sand-yellow);
-    height: auto;
-    width: 90%;
-    margin: 50px 0;
+    margin: 30px 0;
     padding: 20px;
-    border-radius: 10px;
+    width: 90%;
+    height: auto;
+    background-color: var(--sand-yellow);
     border: 5px solid var(--slight-brown);
+    border-radius: 10px;
 }
 
+/* CONTAINS POST DESCRIPTION & AVATAR */
 .post-header {
     display: flex;
     flex-direction: row;
@@ -261,44 +236,50 @@ article {
     margin: -50px 0 50px 0;
 }
 
+/* CONTAINS POST BUTTONS */
 .post-options {
     display: flex;
     flex-direction: row;
-    justify-content: space-evenly;
+    justify-content: flex-start;
     align-items: flex-start;
 }
 
+/* USER AVATAR */
 main img {
-    border-radius: 50%;
     height: 100px;
     width: 100px;
     background-color: var(--slime-green);
     border: 7px solid var(--slime-green);
+    border-radius: 50%;
 }
 
 /* ======================= */
-/* ASIDE-SPECIFIC */
+/* UNIQUE TO ASIDE */
 /* ======================= */
 
-.game-results {
-    width: 90%;
-    border-radius: 5px;
-    background-color: var(--slight-brown);
-    padding: 20px;
+/* DIV WRAPPING GAME CARDS */
+.search-results {
     margin: 30px 0;
+    padding: 10px;
+    width: 100%;
+    border-radius: 5px;
+    overflow: scroll;
 }
 
-.results {
-    width: 100%;
-    height: 100%;
+/* INDIVIDUAL GAME INFORMATION */
+.game-card {
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
-    align-items: flex-end;
+    align-items: flex-start;
+    width: 90%;
+    padding: 15px;
+    height: auto;
+    margin: 15px;
+    background-color: var(--slight-brown);
 }
 
-.results img {
-    /* border-radius: 50%; */
+.game-card img {
     background-color: var(--slime-green);
     border: 7px solid var(--slime-green);
     width: 250px;
@@ -306,24 +287,25 @@ main img {
     margin-right: 20px;
 }
 
+/* WRAPS THE IMAGE AND DESCRIPTION */
 .image-description {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    margin-top: 40px;
+    margin-top: 30px;
 }
-
-
 
 /* ======================= */
 /* BUTTONS */
 /* ======================= */
 
+/* GENERAL BUTTON STYLING */
 .button {
-    font-size: 1.25rem;
-    border-radius: 3px;
+    margin-right: 50px;
     padding: 10px 20px;
+    font-size: 1.25rem;
     text-transform: uppercase;
+    border-radius: 3px;
     cursor: url('https://i.imgur.com/yeKqltZ.png'), auto;
 }
 
@@ -333,48 +315,195 @@ main img {
 }
 
 .blue {
-    border: 2px solid var(--snake-blue);
-    background-color: #fcfcfc;
+    border: 2px solid white;
+    background-color: var(--snake-blue);
+    color: white;
 }
 
 .red {
-    border: 2px solid var(--slime-green);
-    background-color: #fffefe;
+    border: 2px solid white;
+    background-color: #ec664e;
+    color: white;
 }
 
+/* MEDIA QUERY, -1200 */
 @media screen and (max-width: 1200px) {
+    /* ======================= */
+    /* GENERAL TEXT */
+    /* ======================= */
+
+    /* APP TITLE */
+    h1 {
+        margin-left: 1%;
+        padding: 10px;
+        font-size: 3rem;
+    }
+
+    h1:hover {
+        color: var(--slime-green);
+    }
+
+    /* MAIN SECTION DESCRIPTION */
+    h2 {
+        font-size: 2.5rem;
+        text-align: center;
+    }
+
+    /* POST & GAME TITLE */
+    h3 {
+        font-size: 2.25rem;
+    }
+
+    /* HEADER ADD REVIEW BUTTON: UNIVERSAL COMMENT-OUT */
+    /* h4 {
+        font-size: 2rem;
+        font-weight: 600;
+        line-height: 1rem;
+        letter-spacing: -1px;
+        text-transform: uppercase;
+        color: #ffffff;
+        cursor: url('https://i.imgur.com/yeKqltZ.png'),progress;
+    } */
+
+    /* h4:hover {
+        color: var(--slime-green);   
+    } */
+
+    /* REVIEW MAIN TEXT & GAME DESCRIPTION */
+    p {
+        width: 95%;
+        font-family: 'Helvetica Neue', sans-serif;
+        font-weight: 400;
+        font-size: 1.15rem;
+        line-height: 1.75rem;
+    }
+
+    /* ======================= */
+    /* BODY PARTS */
+    /* ======================= */
+
+    /* CONTAINS APP TITLE, ADD REVIEW BUTTON, SEARCH GAME FUNCTION */
     header {
         flex-direction: column;
         justify-content: flex-start;
+        align-items: center;
+        padding: 5px 0;
+        height: auto;
+    }
+
+    /* CONTAINS MAIN, ASIDE */
+    .main-aside {
+        flex-direction: column-reverse;
+        justify-content: flex-start;
+    }
+
+    /* CONTAINS MAIN DESCRIPTION, POSTS */
+    main {
+        width: 90%;
+        margin: 0 auto;
+        overflow: scroll;
+    }
+
+    /* CONTAINS GAME SEARCH RESULTS */
+    aside {
+        flex-direction: row;
+        justify-content: center;
+        align-items: flex-start;
+        padding: 10px;
         width: 100%;
-        height: 300px;
-        padding: 20px 0;
+        height: auto;
+        min-height: 100px;
+        overflow: scroll;
+        border-left: none;
+        border-bottom: 5px solid var(--slime-green);
     }
 
-    header h2 {
-        margin-left: 1%;
-        margin-bottom: -40px;
+    /* ======================= */
+    /* FORMS & INPUTS */
+    /* ======================= */
+
+    header label {
+        display: none;
     }
 
-    header .searchBar {
+    /* ======================= */
+    /* UNIQUE TO HEADER */
+    /* ======================= */
+
+    /* GAME SEARCH BAR */
+    .searchBar {
         margin-right: 1%;
     }
 
-    label {
-        margin: 0 5px;
+    /* ======================= */
+    /* UNIQUE TO MAIN */
+    /* ======================= */
+
+    /* LOCATED ON MAIN */
+    article {
+        padding: 20px 10px;
+        height: auto;
     }
-    /*==============
-    Aside
-    *============*/
-    .game-results {
-      font-size: 0.5em;
-      padding: 50px;
+
+    /* USER AVATAR */
+    main img {
+        height: 75px;
+        width: 75px;
+        border: 5px solid var(--slime-green);
+        border-radius: 50%;
     }
-    /* I am noticing most of what I am trying to do with game results is having no effect on the css ....I could not figure out why this was? I tried game results and the deck. I think the image comes in from the api as a set width and height so I don't know if that is adjustable somehow? I tried it below to no effect
-    */
-    .game-results > img {
-      width: 50px;
-      height: 50px;
-      font-size: 0.5em;
+
+    /* ======================= */
+    /* UNIQUE TO ASIDE */
+    /* ======================= */
+
+    /* DIV WRAPPING GAME CARDS */
+    .search-results {
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-start;
+        align-items: flex-start;
+        margin: 20px 10px;
+        padding: 10px;
+        width: 95%;
+        overflow: scroll;
     }
+
+    /* INDIVIDUAL GAME INFORMATION */
+    .game-card {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin: 15px;
+        padding: 5px;
+        width: 95%;
+        height: auto;
+    }
+
+    .game-card img {
+        width: 150px;
+        height: auto;
+        margin: 10px;
+    }
+
+    /* WRAPS THE IMAGE AND DESCRIPTION */
+    .image-description {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: center;
+        margin-top: 30px;
+    }
+
+    /* ======================= */
+    /* BUTTONS */
+    /* ======================= */
+
+    /* GENERAL BUTTON STYLING */
+    .button {
+        margin-right: 25px;
+        font-size: 1rem;
+    }
+
 }

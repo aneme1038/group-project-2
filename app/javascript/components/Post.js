@@ -17,8 +17,8 @@ class Post extends React.Component {
         return (
             <article>
                 <div className="post-header">
-                    <h4><span className="gamename">{this.props.postData.username}</span> reviewed
-                        <span className="gamename"> {this.props.postData.game}</span></h4>
+                    <h3><span className="blue-text">{this.props.postData.username}</span> reviewed
+                        <span className="blue-text"> {this.props.postData.game}</span></h3>
                     <img src={this.props.postData.avatar} alt="" />
                 </div>
 

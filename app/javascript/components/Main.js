@@ -100,7 +100,7 @@ class Main extends React.Component {
   render () {
     return (
       <main>
-        <h3>{this.props.view.pageTitle}</h3>
+        <h2>{this.props.view.pageTitle}</h2>
         { this.props.view.page === 'home'
           ? this.state.posts.map((postData) => (
         <Post

@@ -16,18 +16,22 @@ class Header extends React.Component {
     return (
         <header>
             {/* ======================== APP TITLE ======================== */}
-            <h2 onClick={() => { {this.props.handleView('home')} }}>Gameplayce</h2>
+            <h1 onClick={() => { {this.props.handleView('home')} }}>Gameplayce</h1>
 
             {/* ======================== ADD REVIEW ======================== */}
-            <h5 onClick={() => { {this.props.handleView('addPost')} }}>Add Review</h5>
+            {/* <h4 onClick={() => { {this.props.handleView('addPost')} }}>Add Review</h4> */}
 
             {/* ======================== SEARCH FOR GAMES ======================== */}
             <div className="searchBar">
                 <form onSubmit={this.props.handleSearch}>
                     <label htmlFor='gameTitle'>Search Games</label>
-                    <input type='text' onChange={this.props.handleChange}
-                        value={this.props.gameTitle} id="gameTitle" />
-                    <input type='submit' value="LET'S GO" />
+                    <input
+                    type='text'
+                    onChange={this.props.handleChange}
+                    placeholder="search for a game to review here"
+                    value={this.props.gameTitle}
+                    id="gameTitle" />
+                    <input type='submit' value="GO" />
                 </form>
             </div >
         </header>

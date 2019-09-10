@@ -71,7 +71,7 @@ class Post
       }, status: 400
     end
   end
-  # find game by gamename
+  # find game by blue-text
   def self.find(game)
     results = DB.exec("SELECT * FROM posts WHERE game=#{game}")
   end
