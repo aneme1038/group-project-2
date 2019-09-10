@@ -19,7 +19,7 @@ class Header extends React.Component {
             <h1 onClick={() => { {this.props.handleView('home')} }}>Gameplayce</h1>
 
             {/* ======================== ADD REVIEW ======================== */}
-            {/* <h4 onClick={() => { {this.props.handleView('addPost')} }}>Add Review</h4> */}
+            <h4 onClick={() => { {this.props.handleView('addPost')} }}>Add Review</h4>
 
             {/* ======================== SEARCH FOR GAMES ======================== */}
             <div className="searchBar">

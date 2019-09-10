@@ -117,7 +117,6 @@ class App extends React.Component {
     render() {
         return (
             <React.Fragment >
-
                 {/* HEADER: INCLUDES LOGO */}
                 < Header
                   handleSearch={this.handleSearch}
