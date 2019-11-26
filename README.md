@@ -1,4 +1,5 @@
 # README
+http://gameplayce.herokuapp.com/
 
 GamePlayce, a full CRUD application implementing Ruby, Rails, and React.JS alongside Postgresql. The application is a simple take on posting reviews for games that you can search via an API provided by GiantBomb. For more information on the API, visit https://www.giantbomb.com/api
 
