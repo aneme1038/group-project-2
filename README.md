@@ -1,15 +1,15 @@
 # README
-http://gameplayce.herokuapp.com/
+This application is currently deployed via heroku at the following url: http://gameplayce.herokuapp.com/
 
-GamePlayce, a full CRUD application implementing Ruby, Rails, and React.JS alongside Postgresql. The application is a simple take on posting reviews for games that you can search via an API provided by GiantBomb. For more information on the API, visit https://www.giantbomb.com/api
+GamePlayce is a full CRUD application that implementing Ruby on Rails & ReactJS with the help of PostgreSQL. The application is a simple take on posting reviews for games that you can search via an API provided by GiantBomb. For more information on the API, visit https://www.giantbomb.com/api
 
 This application was built as part of a group project to fulfill General Assembly's project group requirements. 
 
-Features of the Application:
-
-* Ruby on Rails ; React ; Postgresql
-  
-* CRUD (Create, Read, Update, and Delete - User / Game Reviews
+## Skilled
+* Ruby on Rails
+* React
+* PostgreSQL
+* CRUD (Create, Read, Update, and Delete) user game reviews
 
 * Configuration
 -Third Party API call to retrieve information on video games via a user search bar. The user can search (for the most part) any video game and the search should return a list of games that contain the wording in the title if not similar wording. The results will display pictures of the games, the game titles, and a short description or summary of what the game is. 
@@ -21,6 +21,3 @@ The database consists of a single table for the main purpose of storing reviews 
 
 * Database initialization
 The database as mentioned has a single table with an Id, Username, Avatar, Body, and Game Title(name). This was initialized prior to making any requests to the API.
-
-* Deployment instructions
-This application is currently deployed via heroku at the following url: 
