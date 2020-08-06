@@ -5,7 +5,7 @@ GamePlayce is a full CRUD application that implementing Ruby on Rails & ReactJS 
 
 This application was built as part of a group project to fulfill General Assembly's project group requirements. 
 
-## Skilled
+## Skills
 * Ruby on Rails
 * React
 * PostgreSQL
