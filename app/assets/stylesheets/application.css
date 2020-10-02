@@ -1,512 +1,102 @@
-/* ======================= */
-/* IMPORTS */
-/* ======================= */
+/* ======================= IMPORTED FILES ======================= */
+/* ======================= IMPORTED FILES ======================= */
 
 @import url("normalize.css");
-@import url('https://fonts.googleapis.com/css?family=Orbitron:400,500,700,900&display=swap');
-@import url('https://fonts.googleapis.com/css?family=Rajdhani:400,600,700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap');
 
 
-/* ======================= */
-/* COLOR VARIABLES */
-/* ======================= */
+/* ======================= COLORS ======================= */
+/* ======================= COLORS ======================= */
 
 :root {
-    --sand-yellow: #d4c697;
-    --slight-brown:#79644f;
-    --slime-green: #00b66d;
-    --snake-blue: #007291;
+    --darkblue: #010021;
+    --white: #ffffff;
+    --purple: #6447B6;
 }
 
+/* ======================= GENERAL ======================= */
+/* ======================= GENERAL ======================= */
 
-/* ======================= */
-/* GENERAL TEXT */
-/* ======================= */
-
-/* APP TITLE */
-h1 {
-    margin-left: 7%;
-    padding: 10px;
-    font-size: 3.5rem;
-    letter-spacing: -1px;
-    text-transform: uppercase;
-    color: var(--sand-yellow);
-    cursor: url('https://i.imgur.com/yeKqltZ.png'), auto;
+* {
+    box-sizing: border-box;
 }
-
-h1:hover {
-    color: var(--slime-green);
-}
-
-/* MAIN SECTION DESCRIPTION */
-h2 {
-    font-size: 3.25rem;
-    letter-spacing: -1px;
-    text-transform: uppercase;
-    color: #ffffff;
-}
-
-/* POST & GAME TITLE */
-h3 {
-    font-size: 2.75rem;
-    letter-spacing: -1px;
-    text-transform: uppercase;
-    color: #000000;
-}
-
-/* HEADER ADD REVIEW BUTTON, UNIVERSAL COMMENT-OUT */
-h4 {
-    font-size: 2rem;
-    font-weight: 600;
-    line-height: 1rem;
-    letter-spacing: -1px;
-    text-transform: uppercase;
-    color: #ffffff;
-    cursor: url('https://i.imgur.com/yeKqltZ.png'),progress;
-}
-
-h4:hover {
-    color: var(--slime-green);   
-}
-
-/* REVIEW MAIN TEXT & GAME DESCRIPTION */
-p {
-    width: 90%;
-    font-family: 'Helvetica Neue', sans-serif;
-    font-weight: 400;
-    font-size: 1.5rem;
-    line-height: 2.5rem;
-}
-
-/* COLOR TEXT */
-.blue-text {
-    color: var(--snake-blue);
-}
-
-.sand-text {
-    color: var(--sand-yellow);
-}
-
-
-/* ======================= */
-/* BODY PARTS */
-/* ======================= */
 
 body {
-    background-color: var(--snake-blue);
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-    font-family: 'Rajdhani', sans-serif;
+    background-color: var(--white);
+    color: var(--darkblue);
+    font-family: 'Inter', sans-serif;
 }
 
-/* CONTAINS APP TITLE, ADD REVIEW BUTTON, SEARCH GAME FUNCTION */
-header {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
-    padding: 20px 0;
-    width: 100%;
-    height: 60px;
-    background-color: var(--slight-brown);
-    border-bottom: 10px solid var(--slime-green);
+body,
+html {
+    margin: 0;
+    overflow-x: hidden;
+    height: 100%;
 }
 
-/* CONTAINS MAIN, ASIDE */
-.main-aside {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
+button {
+    border: none;
 }
 
-/* CONTAINS MAIN DESCRIPTION, POSTS */
-main {
-    width: 60%;
-    height: 100vh;
-    margin-left: 2%;
-    overflow: scroll;
+.button--action {
+    background-color: var(--white);
+    box-shadow: 4px 4px 0px #FFBA00;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 900;
+    height: 30px;
+    letter-spacing: -0.035em;
+    padding: 0 5px;
 }
 
-/* CONTAINS GAME SEARCH RESULTS */
-aside {
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-    align-items: flex-start;
+.container {
     margin: 0 auto;
-    padding: 10px;
-    width: 40%;
-    height: auto;
-    color: var(--slight-brown);
-    background-color: var(--sand-yellow);
-    border-left: 5px solid var(--slime-green);
-    overflow: scroll;
-}
-
-/* ======================= */
-/* FORMS & INPUTS */
-/* ======================= */
-
-/* MAIN FORM: ADD/EDIT */
-form {
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-}
-
-label {
-    margin: 0 20px;
-    font-weight: 600;
-    font-size: 1.5rem;
-    text-transform: uppercase;
-    color: var(--sand-yellow);
-}
-
-input {
-    width: 250px;
-    height: 33px;
-    margin: 30px 0;
-    padding: 0 20px;
-    border: 2px solid var(--slime-green);
-    outline: 0;
-}
-
-textarea {
-    width: 600px;
-    height: 250px;
-    padding: 15px;
-    border: 2px solid var(--slime-green);
-    resize: none;
-}
-
-/* ======================= */
-/* UNIQUE TO HEADER */
-/* ======================= */
-
-/* GAME SEARCH BAR */
-.searchBar {
-    margin-right: 7%;
-}
-
-header label {
-    display: inline;
-}
-
-/* HEADER FORM: ADD/EDIT */
-header form {
-    display: flex;
-    flex-direction: row;
-    justify-content: flex-end;
-    align-items: center;
-}
-
-/* HEADER SUBMIT BUTTON */
-header input[type="submit"] {
-    font-weight: 600;
-    width: 100px;
-    height: 37px;
-    text-align: center;
-    background-color: var(--slime-green);
-}
-
-header input[type="submit"]:hover {
-    background-color: var(--sand-yellow);
-}
-
-/* ======================= */
-/* UNIQUE TO MAIN */
-/* ======================= */
-
-/* LOCATED ON MAIN */
-article {
-    margin: 30px 0;
-    padding: 20px;
     width: 90%;
-    height: auto;
-    background-color: var(--sand-yellow);
-    border: 5px solid var(--slight-brown);
-    border-radius: 10px;
 }
 
-/* CONTAINS POST DESCRIPTION & AVATAR */
-.post-header {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: flex-start;
-    margin: -50px 0 50px 0;
-}
-
-/* CONTAINS POST BUTTONS */
-.post-options {
-    display: flex;
-    flex-direction: row;
-    justify-content: flex-start;
-    align-items: flex-start;
-}
-
-/* USER AVATAR */
-main img {
-    height: 100px;
-    width: 100px;
-    background-color: var(--slime-green);
-    border: 7px solid var(--slime-green);
-    border-radius: 50%;
-}
-
-/* ======================= */
-/* UNIQUE TO ASIDE */
-/* ======================= */
-
-/* DIV WRAPPING GAME CARDS */
-.search-results {
-    margin: 30px 0;
-    padding: 10px;
+header {
+    background-color: var(--purple);
+    height: 65px;
     width: 100%;
-    height: 100vh;
-    border-radius: 5px;
-    overflow: scroll;
 }
 
-/* INDIVIDUAL GAME INFORMATION */
-.game-card {
+h1 {
+    font-size: 125px;
+    font-style: normal;
+    font-weight: 800;
+    letter-spacing: -0.035em;
+    line-height: 110%;
+    margin: 0;
+    text-align: left;
+}
+
+h1:nth-of-type(2) {
+    color: #6FCF97;
+}
+
+h3 {
+    font-size: 25px;
+    font-style: normal;
+    font-weight: 900;
+    letter-spacing: -0.035em;
+    line-height: 110%;
+    margin: 0;
+}
+
+header {
+    align-items: center;
     display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-    align-items: flex-start;
-    width: 90%;
-    padding: 15px;
-    height: auto;
-    margin: 15px;
-    background-color: var(--slight-brown);
+    flex-direction: row;
+    justify-content: center;
 }
 
-.game-card img {
-    background-color: var(--slime-green);
-    border: 7px solid var(--slime-green);
-    width: 250px;
-    height: 250px;
-    margin-right: 20px;
-}
-
-/* WRAPS THE IMAGE AND DESCRIPTION */
-.image-description {
+header .container {
+    align-items: center;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    margin-top: 30px;
 }
 
-/* ======================= */
-/* BUTTONS */
-/* ======================= */
-
-/* GENERAL BUTTON STYLING */
-.button {
-    margin-right: 50px;
-    padding: 10px 20px;
-    font-size: 1.25rem;
-    text-transform: uppercase;
-    border-radius: 3px;
-    cursor: url('https://i.imgur.com/yeKqltZ.png'), auto;
-}
-
-.button:hover {
-    background-color: #000000;
-    color: #ffffff;
-}
-
-.blue {
-    border: 2px solid white;
-    background-color: var(--snake-blue);
-    color: white;
-}
-
-.red {
-    border: 2px solid white;
-    background-color: #ec664e;
-    color: white;
-}
-
-/* MEDIA QUERY, -1200 */
-@media screen and (max-width: 1200px) {
-    /* ======================= */
-    /* GENERAL TEXT */
-    /* ======================= */
-
-    /* APP TITLE */
-    h1 {
-        margin-left: 1%;
-        padding: 10px;
-        font-size: 3rem;
-    }
-
-    h1:hover {
-        color: var(--slime-green);
-    }
-
-    /* MAIN SECTION DESCRIPTION */
-    h2 {
-        font-size: 2.5rem;
-        text-align: center;
-    }
-
-    /* POST & GAME TITLE */
-    h3 {
-        font-size: 2.25rem;
-    }
-
-    /* HEADER ADD REVIEW BUTTON: UNIVERSAL COMMENT-OUT */
-    h4 {
-        font-size: 2rem;
-        font-weight: 600;
-        line-height: 1rem;
-        letter-spacing: -1px;
-        text-transform: uppercase;
-        color: #ffffff;
-        cursor: url('https://i.imgur.com/yeKqltZ.png'),progress;
-    }
-
-    h4:hover {
-        color: var(--slime-green);   
-    }
-
-    /* REVIEW MAIN TEXT & GAME DESCRIPTION */
-    p {
-        width: 95%;
-        font-family: 'Helvetica Neue', sans-serif;
-        font-weight: 400;
-        font-size: 1.15rem;
-        line-height: 1.75rem;
-    }
-
-    /* ======================= */
-    /* BODY PARTS */
-    /* ======================= */
-
-    /* CONTAINS APP TITLE, ADD REVIEW BUTTON, SEARCH GAME FUNCTION */
-    header {
-        flex-direction: column;
-        justify-content: flex-start;
-        align-items: center;
-        padding: 5px 0;
-        height: auto;
-    }
-
-    /* CONTAINS MAIN, ASIDE */
-    .main-aside {
-        flex-direction: column-reverse;
-        justify-content: flex-start;
-    }
-
-    /* CONTAINS MAIN DESCRIPTION, POSTS */
-    main {
-        width: 90%;
-        margin: 0 auto;
-        overflow: scroll;
-    }
-
-    /* CONTAINS GAME SEARCH RESULTS */
-    aside {
-        display: flex;
-        flex-direction: column;
-        justify-content: flex-start;
-        align-items: flex-start;
-        margin: 0 auto;
-        padding: 0;
-        width: 100%;
-        height: auto;
-        border: none;
-        border-bottom: 5px solid var(--slime-green);
-        overflow: scroll;
-    }
-
-    /* ======================= */
-    /* FORMS & INPUTS */
-    /* ======================= */
-
-    header label {
-        display: none;
-    }
-
-    /* ======================= */
-    /* UNIQUE TO HEADER */
-    /* ======================= */
-
-    /* GAME SEARCH BAR */
-    .searchBar {
-        margin-right: 1%;
-    }
-
-    /* ======================= */
-    /* UNIQUE TO MAIN */
-    /* ======================= */
-
-    /* LOCATED ON MAIN */
-    article {
-        padding: 20px 10px;
-        height: auto;
-    }
-
-    /* USER AVATAR */
-    main img {
-        height: 50px;
-        width: 50px;
-        border: 3px solid var(--slime-green);
-        border-radius: 50%;
-    }
-
-    /* ======================= */
-    /* UNIQUE TO ASIDE */
-    /* ======================= */
-
-    /* DIV WRAPPING GAME CARDS */
-    .search-results {
-        display: flex;
-        flex-direction: row;
-        justify-content: flex-start;
-        align-items: flex-start;
-        margin: 20px 10px;
-        padding: 0;
-        width: 95%;
-    }
-
-    /* INDIVIDUAL GAME INFORMATION */
-    .game-card {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        margin: 15px;
-        padding: 5px;
-        width: 300px;
-        height: auto;
-    }
-
-    .game-card img {
-        width: 150px;
-        height: auto;
-        margin: 10px;
-    }
-
-    /* WRAPS THE IMAGE AND DESCRIPTION */
-    .image-description {
-        display: flex;
-        flex-direction: column;
-        justify-content: flex-start;
-        align-items: center;
-        margin-top: 30px;
-    }
-
-    /* ======================= */
-    /* BUTTONS */
-    /* ======================= */
-
-    /* GENERAL BUTTON STYLING */
-    .button {
-        margin-right: 25px;
-        font-size: 1rem;
-    }
-
+header h3 {
+    color: var(--white);
 }
