@@ -2,6 +2,8 @@
 // ======================= DEPENDENCIES ======================= //
 
 import React, { useState } from 'react'
+import { IconContext } from 'react-icons'
+import { IoMdSearch } from 'react-icons/io'
 
 // ======================= HEADER FUNCTION ======================= //
 // ======================= HEADER FUNCTION ======================= //
@@ -14,25 +16,43 @@ export function Header() {
     //     game: '',
     //     id: null
     // })
+    const [isFormOpen, setIsFormOpen] = useState(false)
 
     function handleChange(event) {
         setUser({ [event.target.id]: event.target.value })
     }
 
-    // function handleSubmit(event) {
-    //     event.preventDefault()
-
-
-    // }
-
     return (
-        <header>
-            <div className="container">
-                <h3>Gameplayce</h3>
+        <div className="header-search">
+            <header>
+                <div className="container">
+                    <h3>Gameplayce</h3>
 
-                <button className="button--action">Add Review</button>
-            </div>
-        </header>
+                    <IconContext.Provider value={{ color: '#ffffff', size: '28px' }}>
+                        <IoMdSearch onClick={() => {setIsFormOpen(!isFormOpen)}} />
+                    </IconContext.Provider>
+                    <button className="button--action">Add Review</button>
+                </div>
+            </header>
+
+            {isFormOpen ? <div className="search-bar">
+                <div className="container">
+                    <form>
+                        <label htmlFor="gameTitle">Search Games</label>
+
+                        <input
+                            type="text"
+                            // onChange={this.props.handleChange}
+                            placeholder="search for a game to review here"
+                            // value={this.props.gameTitle}
+                            id="gameTitle" />
+                        <button type="submit" class="button--form">Find</button>
+                        {/* <input type='submit' value="GO" /> */}
+                    </form>
+                    <span className="search-credit">Powered by <a href="https://www.giantbomb.com/api/" target="_blank">GiantBomb API</a></span>
+                </div>
+            </div> : null}
+        </div>
     )
 }
 
@@ -47,11 +67,6 @@ export function Header() {
 //   render () {
 //     return (
 //         <header>
-//             {/* ======================== APP TITLE ======================== */}
-//             <h1 onClick={() => { {this.props.handleView('home')} }}>Gameplayce</h1>
-
-//             {/* ======================== ADD REVIEW ======================== */}
-//             <h4 onClick={() => { {this.props.handleView('addPost')} }}>Add Review</h4>
 
 //             {/* ======================== SEARCH FOR GAMES ======================== */}
 //             <div className="searchBar">
